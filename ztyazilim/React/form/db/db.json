@@ -1,0 +1,45 @@
+{
+  "user": [],
+  "book": [
+    {
+      "name": "Harry Potter",
+      "author": "J.K. Rowling",
+      "date": "2000-07-14",
+      "pageCount": "300",
+      "price": "200",
+      "gender": "novel",
+      "publisher": "YKY",
+      "id": 1
+    },
+    {
+      "name": "Sefiller",
+      "author": "Hugo",
+      "date": "2023-12-06",
+      "pageCount": "2000",
+      "price": "1000",
+      "gender": "novel",
+      "publisher": "IS",
+      "id": 2
+    },
+    {
+      "name": "Sefiller",
+      "author": "Hugo",
+      "date": "2023-11-29",
+      "pageCount": "33",
+      "price": "33",
+      "gender": "novel",
+      "publisher": "IS",
+      "id": 3
+    },
+    {
+      "name": "Suç ve Ceza",
+      "author": "Dosto",
+      "date": "2023-12-21",
+      "pageCount": "1000",
+      "price": "500",
+      "gender": "novel",
+      "publisher": "IS",
+      "id": 4
+    }
+  ]
+}

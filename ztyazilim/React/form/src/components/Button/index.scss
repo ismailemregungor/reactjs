@@ -1,0 +1,17 @@
+.btn {
+  $size: 32px;
+  $color: #0080ff;
+
+  line-height: $size;
+  border-radius: $size / 2;
+  padding: 0 24px;
+  border: none;
+  background-color: $color;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}

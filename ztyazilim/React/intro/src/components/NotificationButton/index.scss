@@ -1,0 +1,46 @@
+@mixin transition($x) {
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+
+%foo {
+  color: white;
+}
+
+.notificationButton {
+  // button ile ilgili css'ler yazılır
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: lightgrey;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  @include transition(0.3s all linear);
+  @extend %foo;
+
+  & &-count {
+    // notificationButton-count class'ı için css yazılır.
+    $size: 15px;
+
+    position: absolute;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    background-color: #aa0324;
+    color: white;
+    font-size: 12px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+// .notificationButton {
+// }
+// .notificationButton .notificationButton-count {
+//   // notificationButton-count class'ı için css yazılır.
+// }

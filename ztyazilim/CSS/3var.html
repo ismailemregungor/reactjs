@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Var</title>
+    <style>
+      :root {
+        --header-color: #f17515;
+        --special-color: #1a63f4;
+        --size: 24px;
+        --medium-size: calc(var(--size) * 1.5);
+      }
+
+      .box {
+        --box-size: 100px;
+
+        width: var(--box-size);
+        height: var(--box-size);
+        border-radius: calc(var(--box-size) / 4);
+        background-color: var(--header-color);
+      }
+
+      .ai {
+        color: var(--header-color);
+        font-size: var(--medium-size);
+      }
+
+      .speakers {
+        color: var(--header-color);
+        font-size: var(--size);
+      }
+
+      span {
+        font-size: var(--size);
+      }
+
+      p span {
+        /* p altındaki span */
+        color: var(--header-color);
+      }
+
+      ul span {
+        /* ul'nin altındaki span */
+        color: var(--special-color);
+      }
+
+      span > span {
+        /* span'in hemen altındaki span */
+        color: var(--header-color);
+      }
+
+      p span > span {
+        color: var(--special-color);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        <header>
+          <h3 class="ai">Yapay zeka</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <span
+            >Fugit reprehenderit pariatur tempora <span>unde</span> voluptas
+            exercitationem suscipit odio deleniti nihil quis,</span
+          >
+          delectus laborum consectetur labore nobis similique, assumenda officia
+          facilis et. Suscipit amet consequatur itaque laboriosam iste molestiae
+          qui veniam asperiores. Eveniet doloribus incidunt ut repellat eum nemo
+          tempore cumque, unde, nihil obcaecati illum eaque fugit laborum ab
+          atque. Doloremque, iste. Nobis, ullam vero earum eius voluptatum nihil
+          recusandae in, at nemo ducimus laborum iusto expedita aut laboriosam.
+          Eos praesentium at quaerat aspernatur nemo? Itaque quo perspiciatis
+          natus nisi distinctio atque!
+        </p>
+      </article>
+      <article>
+        <header>
+          <h3 class="speakers">Konuşanlar</h3>
+        </header>
+        <ul>
+          <li>
+            <span>Lorem ipsum <span>dolor</span> sit amet</span> consectetur
+            adipisicing elit. Quae quia repudiandae soluta ipsam itaque eum sunt
+            neque ut dicta! Rerum autem explicabo rem consectetur, consequuntur
+            obcaecati dolores quos officiis at!
+          </li>
+          <li>
+            Necessitatibus quasi ad dolores consequuntur quisquam quae! Rerum
+            eos voluptate veniam consectetur. Perferendis, sunt. Amet tempora
+            fugiat architecto consectetur tempore itaque nulla cumque. Eum
+            beatae ab quo. Quaerat, possimus velit.
+          </li>
+          <li>
+            Natus accusantium similique veniam ducimus debitis. Ea quaerat
+            doloribus dicta illum facilis architecto aut id est quos tempora
+            error quas odio at deserunt, reprehenderit harum hic labore cum
+            dolorem praesentium?
+          </li>
+          <li>
+            Sunt sequi totam necessitatibus, esse iste dolores voluptatem
+            aspernatur molestias asperiores, eligendi nam dignissimos,
+            cupiditate consectetur hic. Sint nisi, laboriosam eos recusandae
+            neque quae ut praesentium, minus, autem ex doloribus.
+          </li>
+          <li>
+            Provident, cupiditate illo, dolorum perferendis labore quibusdam
+            vero non optio magnam blanditiis voluptatum repellendus iste vitae
+            sunt eum doloremque excepturi dolore nesciunt nobis expedita, est
+            odit eaque! Ducimus, unde repellendus?
+          </li>
+        </ul>
+      </article>
+
+      <div class="box"></div>
+    </section>
+  </body>
+</html>

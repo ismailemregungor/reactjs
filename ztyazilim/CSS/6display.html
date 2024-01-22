@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .block {
+        background-color: aquamarine;
+        display: block;
+        /* Margin, Padding */
+        /* 24px: top,right,bottom,left:24px */
+        /* 24px 36px: top,bottom:24px right,left:36px*/
+        /* 24px 36px 18px: top:24px right,left:36px bottom:18px*/
+        /* 24px 36px 18px 12px: top:24px right:36px bottom:18px left:12px*/
+        margin: 24px 36px 16px;
+        padding: 30px;
+        /* height: 60px; */
+      }
+
+      .inline {
+        display: inline;
+        background-color: cornflowerblue;
+        color: white;
+        margin: 24px 36px 16px;
+        padding: 30px;
+      }
+
+      .inline-block {
+        display: inline-block;
+        background-color: crimson;
+        color: white;
+        margin: 24px 36px 16px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">Display Block</div>
+    <div class="none block">Display none</div>
+    <div class="block">
+      <div class="inline">Display Inline</div>
+      <div class="inline">Display Inline</div>
+    </div>
+    <div class="block">
+      Nested inline block
+      <div class="inline-block">Inline Block</div>
+    </div>
+  </body>
+</html>

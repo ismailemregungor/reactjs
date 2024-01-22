@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        --size: 100px;
+
+        position: relative;
+        height: var(--size);
+        width: var(--size);
+        margin: 100px auto;
+
+        border-radius: calc(var(--size) / 5);
+        border: 2px solid #3275f1;
+        background-color: cornflowerblue;
+
+        color: white;
+        font-family: sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 30px;
+        line-height: var(--size);
+      }
+
+      .absolute {
+        --size: 30px;
+
+        position: absolute;
+        top: calc((-1) * var(--size) / 2);
+        right: calc((-1) * var(--size) / 2);
+
+        height: var(--size);
+        width: var(--size);
+
+        border-radius: calc(var(--size) / 2);
+        background-color: crimson;
+        box-shadow: -3px 3px 6px -2px rgba(0, 0, 0, 0.75);
+
+        font-family: sans-serif;
+        line-height: var(--size);
+        color: white;
+        font-size: 16px;
+      }
+
+      .fixed {
+        --size: 100px;
+        --spacing: 100px;
+
+        height: var(--size);
+        width: var(--size);
+        border-radius: calc(var(--size) / 2);
+
+        position: fixed;
+        bottom: var(--spacing);
+        right: var(--spacing);
+
+        background-color: limegreen;
+
+        font-size: 30px;
+        font-weight: 800;
+        font-family: sans-serif;
+        line-height: var(--size);
+        text-align: center;
+        color: white;
+      }
+
+      .parent {
+        --size: 500px;
+
+        position: relative;
+        background-color: grey;
+
+        height: var(--size);
+        width: var(--size);
+      }
+
+      .child {
+        --size: 125px;
+
+        position: absolute;
+        top: 50%;
+        left: calc(50% - var(--size) / 2);
+
+        background-color: red;
+
+        height: var(--size);
+        width: var(--size);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      X
+      <div class="absolute">
+        99
+        <div class="absolute">99</div>
+      </div>
+    </div>
+
+    <div class="fixed">0</div>
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --small: Inter;
+  --btn-text: Montserrat;
+  --font-open-sans: "Open Sans";
+
+  /* font sizes */
+  --small-size: 12px;
+  --btn-text-size: 14px;
+  --h5-size: 16px;
+
+  /* Colors */
+  --tonal-background: #394264;
+  --dark-background-color: #252b42;
+  --secondary-color-2: #23856d;
+  --text-color: #fff;
+  --primary-color: #ec5c2e;
+  --second-text-color: #ececec;
+  --primary-color1: #31a0fe;
+  --second-text-color1: #737373;
+
+  /* Gaps */
+  --gap-base: 16px;
+  --gap-3xs: 10px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-13xl: 32px;
+  --padding-7xs: 6px;
+  --padding-5xl: 24px;
+
+  /* Border radiuses */
+  --br-6xl: 25px;
+  --br-8xs: 5px;
+
+  /* Effects */
+  --light-drop-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  position: relative;
+  background-color: var(--tonal-background);
+  width: 100%;
+  max-width: 1440px;
+  height: 885px;
+  margin: auto;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--btn-text-size);
+  color: var(--text-color);
+  font-family: var(--small);
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  width: 1440px;
+  height: 96px;
+  color: var(--second-text-color);
+}
+
+.logo {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 196px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+  font-size: var(--h5-size);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.favicon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.brand-name {
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+}
+
+.button {
+  position: relative;
+  letter-spacing: 0.2px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.signup-button {
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 195px;
+  border-radius: var(--br-6xl);
+  background-color: var(--text-color);
+  box-shadow: var(--light-drop-shadow);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-7xs) var(--padding-5xl);
+  color: var(--dark-background-color);
+}
+.home-button,
+.about-button,
+.contact-button,
+.blog-button {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 220px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-13xl);
+}
+.about-button,
+.contact-button,
+.blog-button {
+  left: calc(50% - 111px);
+}
+.contact-button,
+.blog-button {
+  left: calc(50% - 0.5px);
+}
+.blog-button {
+  left: calc(50% + 123.5px);
+}
+
+.open-sans-montserrat {
+  top: 214px;
+  width: 440px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 35px;
+  font-size: 48px;
+  font-family: var(--font-open-sans);
+  color: white;
+}
+
+.unlock-your-learning-container {
+  line-height: 64px;
+  font-weight: 800;
+  width: 440px;
+}
+
+.educraft {
+  background: linear-gradient(90deg, #8a5ae2, #c24be7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.embrace-lifes-vastness,
+.unlock-your-learning-container {
+  position: relative;
+  letter-spacing: 0.2px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.embrace-lifes-vastness {
+  font-size: var(--btn-text-size);
+  line-height: 20px;
+  font-family: var(--btn-text);
+  color: var(--second-text-color);
+  width: 357px;
+}
+
+.join-class-button,
+.get-started-button,
+.open-sans-montserrat {
+  position: absolute;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.join-class-button,
+.get-started-button {
+  top: 610px;
+  border-radius: var(--br-6xl);
+  background-color: var(--primary-color);
+  box-shadow: var(--light-drop-shadow);
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-13xl);
+  font-family: var(--btn-text);
+}
+.get-started-button {
+  left: 356px;
+  background-color: var(--text-color);
+  color: var(--dark-background-color);
+}
+
+.find-a-course-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.find-a-course-text {
+  position: relative;
+  letter-spacing: 0.2px;
+  line-height: 16px;
+  color: white;
+}
+.online-courses-icon-group,
+.find-a-course-icon-group {
+  position: absolute;
+  top: 707px;
+  left: 196px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+  font-size: var(--small-size);
+}
+
+.online-courses-icon-group {
+  left: 362px;
+}
+
+.round-container {
+  top: 140px;
+  left: 735px;
+  height: 623.11px;
+}
+
+.round-container,
+.child-image {
+  position: absolute;
+  width: 569px;
+}
+
+.child-image {
+  top: 0;
+  left: calc(50% - 284.5px);
+  border-radius: 279.91px;
+  height: 623px;
+  object-fit: cover;
+}
+
+.child-image-group {
+  position: absolute;
+  top: 119.73px;
+  left: 15.25px;
+  border-radius: 50%;
+  background-color: var(--secondary-color-2);
+  width: 503.38px;
+  height: 503.38px;
+}

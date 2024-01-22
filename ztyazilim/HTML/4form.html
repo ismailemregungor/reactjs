@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Form</legend>
+      <form action="javascript:alert('Form submit edildi.')">
+        <label for="text1">Name:</label>
+        <input
+          type="text"
+          name="text1"
+          placeholder="enter a value"
+          id="text1"
+        />
+        <br />
+        <hr />
+        <label
+          >Date:
+          <input type="date" name="date1" />
+        </label>
+        <br />
+        <label>
+          <input type="checkbox" name="checkbox1" value="option1" />
+          option 1
+        </label>
+        <br />
+        <label>
+          <input type="checkbox" name="checkbox2" value="option1" />
+          option 2
+        </label>
+        <br />
+        <label>
+          <input type="radio" name="gender" value="female" />
+          Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="male" />
+          Male
+        </label>
+        <br />
+        <label>
+          Number:
+          <input type="number" name="number1" min="0" max="10" />
+        </label>
+        <br />
+        <label>
+          File
+          <input type="file" name="file1" />
+        </label>
+        <input type="hidden" name="hidden1" />
+        <br />
+        <label>
+          Password:
+          <input type="password" name="password1" />
+        </label>
+        <br />
+        <label>
+          Select a student:
+          <select name="select1">
+            <option value="anil">Anıl</option>
+            <option value="erkut">Erkut</option>
+            <option value="berk">Berk</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          Select students:
+          <select name="select2" multiple size="2">
+            <option value="anil">Anıl</option>
+            <option value="erkut">Erkut</option>
+            <option value="berk">Berk</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          Description:
+          <textarea name="textarea1" cols="30" rows="5"></textarea>
+        </label>
+        <br />
+        <input type="submit" value="Save" />
+        <button type="submit">Save</button>
+      </form>
+    </fieldset>
+  </body>
+</html>

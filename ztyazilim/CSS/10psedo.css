@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --trasition: 0.3s all cubic-bezier(0.51, 0.39, 0.41, 0.83);
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  position: relative;
+
+  padding: 24px;
+  width: 100%;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS5iMI4cjmwHeoEMDDybkqkkTTnXWN9o8nag&usqp=CAU)
+    no-repeat;
+  background-size: cover;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* background-color: black;
+  opacity: 0.5; */
+  background-color: rgba(87, 87, 87, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
+
+nav > * {
+  z-index: 2;
+}
+
+img.logo {
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  animation: logo-spin 5s linear infinite;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  flex: 1 0 auto;
+  display: flex;
+  gap: 24px;
+
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: var(--trasition);
+}
+
+a:hover {
+  color: crimson;
+}
+
+button.profile {
+  --size: 30px;
+  height: var(--size);
+  width: 52px;
+
+  border: 1px solid crimson;
+  padding: 0 12px;
+  border-radius: calc(var(--size) / 2);
+  background-color: #dd2247;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--trasition);
+  position: relative;
+}
+
+button.profile::before {
+  content: "AB";
+  opacity: 1;
+  transition: var(--trasition);
+}
+
+button.profile::after {
+  content: "BC";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  line-height: 29px;
+  left: 12px;
+  transition: var(--trasition);
+}
+
+button.profile:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+}
+
+button.profile:hover::before {
+  opacity: 0;
+}
+button.profile:hover::after {
+  opacity: 1;
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #770018;
+  transition: var(--trasition);
+  display: none;
+}
+
+.menu:hover {
+  color: #e5002e;
+}

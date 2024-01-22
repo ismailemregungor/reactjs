@@ -1,0 +1,10 @@
+/* @media screen and (min-width: 576px) and (max-width: 768px) { */
+@media screen and (576px < width < 768px) and (orientation: portrait /*landscape*/) {
+  .menu {
+    display: block;
+  }
+
+  li {
+    display: none;
+  }
+}

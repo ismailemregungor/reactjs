@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  border: 3px solid black;
+  margin: 20px auto;
+
+  display: flex;
+  /* flex-direction: bizim hangi düzlemde çalıştığımızı belirler (yatay,dikey) */
+  flex-direction: row;
+  /* flex-wrap: default olarak nowrap gelir. item'ların satır sonunda aşağı inmesi
+  için wrap olarak tanımlanmalıdır. */
+  flex-wrap: wrap;
+
+  /* justify-content: tanımlandığı düzleme göre hizalama */
+  justify-content: space-between;
+  /* align-items: tanımlandığı düzlemin tersine göre hizalama, itemların bulunduğu
+  satır içesinde hizalama */
+  align-items: baseline;
+  /* align-content: tanımlandığı düzlemin tersine göre hizalama */
+  align-content: stretch;
+
+  gap:20px; /* item'lar arasına boşluk vermek için kullanılır. */
+}
+
+.child {
+  --size: 100px;
+
+  height: var(--size);
+  line-height: var(--size);
+
+  background-color: crimson;
+  border: 2px solid brown;
+
+  color: white;
+  text-align: center;
+  font-size: 36px;
+
+  order: 3;
+  flex-shrink: 2; /* küçülme oranı */
+  flex-basis: 200px; /* flex-direction: row iken olması istenilen width */
+}
+
+.child:nth-child(3) {
+  order: 1;
+  flex-grow: 2; /* büyüme oranı */
+  line-height: normal;
+  align-self: center;
+}
+
+.child:nth-child(3n - 1) {
+  flex-grow: 1;
+  order: 2;
+}

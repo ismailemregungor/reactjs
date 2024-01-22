@@ -1,0 +1,24 @@
+.booksLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  .booksForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+
+    label {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+  }
+}

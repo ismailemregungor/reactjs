@@ -1,0 +1,124 @@
+$card-height: 220px;
+$card-width: 600px;
+$image-width: $card-height;
+$content-width: $card-width - $image-width;
+$padding: 20px;
+$gap: 10px;
+$card-bg-color: #3c3e44;
+$card-radius: 10px;
+$card-margin: 0.75rem;
+$title-font-size: 27px;
+$title-font-weight: 800;
+$title-hover-color: #ff9800;
+$text-color: white;
+$text-secondary-color: #9e9e9e;
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+.card {
+  height: $card-height;
+  width: $card-width;
+  display: flex;
+  background-color: $card-bg-color;
+  border-radius: $card-radius;
+  color: $text-color;
+  overflow: hidden;
+  margin: $card-margin;
+
+  .character-image {
+    width: $image-width;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .card-content {
+    margin: 0;
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $gap;
+    align-items: flex-start;
+
+    .character-title,
+    .character-location,
+    .character-episode {
+      align-items: flex-start;
+      margin: 0;
+      padding-left: 0;
+      color: $text-secondary-color;
+
+      .location-label,
+      .episode-label {
+        margin-bottom: 0;
+      }
+
+      .title,
+      .status,
+      .location,
+      .episode {
+        margin: 0;
+        color: $text-color;
+        font-family: $font-stack;
+        align-items: flex-start;
+      }
+
+      .title {
+        font-size: $title-font-size;
+        font-weight: $title-font-weight;
+
+        &:hover {
+          color: $title-hover-color;
+          cursor: pointer;
+        }
+      }
+
+      .status-container {
+        display: inline-flex;
+        align-items: center;
+        line-height: 26px;
+
+        .status-dot {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 5px;
+        }
+
+        .alive {
+          background-color: #55cc44;
+        }
+
+        .dead {
+          background-color: #d63d2e;
+        }
+
+        .unknown {
+          background-color: blue;
+        }
+
+        .status-text {
+          color: $text-color;
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: 5px;
+        }
+      }
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 18px;
+
+        &:hover {
+          color: $title-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
