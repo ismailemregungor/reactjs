@@ -1,0 +1,72 @@
+Yönergeler
+Ekte admin-panel projesi üzerinde user sayfası gibi diğer sayfaların CRUD işlemleri yapılacak. Sayfaların column ve field'ları aşağıdaki gibi olacak. Projenin standart görünümünü korumaya devam etmelisiniz. Sorularınız olduğunda gruptan mutlaka çekinmeden yazın. Sorularınızı ve cevaplarını herkes görsün. 
+
+Chart için: https://primereact.org/chart/
+
+Aşağıdaki sayfalar yaratıldıktan sonra her sayfa için ekleme silme ve düzenleme butonları için permission'lar tanımlanacak.
+3 tane role tanımlanacak Admin, StandardUser, Viewer olacak.
+
+
+User:
+
+Fields:
+
+  *   firstname: input text
+  *   lastname: input text
+  *   gender: select option
+  *   role: select option (db role den çekilecek)
+  *  flow: select option (db flow'dan çekilecek)
+
+Columns:
+
+  *   First name
+  *   Last name
+  *   Gender
+  *   Roles (custom render)
+
+
+Role:
+
+Fields:
+
+name: input text
+permissions: select option (db permission dan çekilecek) multiple
+Columns:
+
+Name
+Permissions (modal)
+
+
+Permissions:
+
+Fields:
+
+name: input text
+Columns:
+
+Name
+
+
+Task:
+
+Fields:
+
+name: input text
+Columns:
+
+Name
+
+
+Flow:
+
+Fields:
+
+name: input text
+tasks: select option (db task dan çekilecek) multiple
+Columns:
+
+Name
+Task
+Settings:
+Projenin genel temasını değiştirilebileceği bir ColorPicker kullanılcak. Seçilen renge göre projenin primaryColor'ı değişecek.
+Bir tane user select option'ında tüm user'lar çekilecek. Oradan bir user seçilecek. Eğer user admin se premission'larına göre her şeye yetkisi olacak. Eğer StandardUser ise sayfalarda permission kontrolü ile ekleme silme yapamayacak. Eğer Viewer ise sadece verileri görüntüleyebilecek, ekleme silme düzenleme yapamayacak.
